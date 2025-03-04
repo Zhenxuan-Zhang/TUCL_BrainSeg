@@ -29,8 +29,6 @@ We introduce **Task-oriented Uncertainty Collaborative Learning (TUCL)**, a nove
 
 TUCL achieves **state-of-the-art performance**, improving segmentation accuracy to **88.2% Dice** and reducing boundary errors to **10.853 mm HD95** under limited supervision.
 
-🔗 **GitHub Repository:** [TUCL_BrainSeg](https://anonymous.4open.science/r/TUCL_BrainSeg-1C2F/)
-
 ---
 
 ## ⚙️ Installation
