@@ -87,8 +87,4 @@ The TUCL framework comprises:
 
 TUCL achieves the **best segmentation performance**, outperforming existing models in **accuracy and robustness**.
 
----
-
-## 📞 Contact
-For inquiries or collaborations, please open an issue on [GitHub](https://anonymous.4open.science/r/TUCL_BrainSeg-1C2F/issues).
 
