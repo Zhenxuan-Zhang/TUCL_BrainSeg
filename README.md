@@ -91,19 +91,6 @@ TUCL achieves the **best segmentation performance**, outperforming existing mode
 
 ---
 
-## 📜 Citation
-If you use TUCL in your research, please cite:
-```bibtex
-@article{TUCL2024,
-  title={Task-oriented Uncertainty Collaborative Learning for Label-Efficient Brain Tumor Segmentation},
-  author={Anonymous},
-  journal={Under Review},
-  year={2024}
-}
-```
-
----
-
 ## 📞 Contact
 For inquiries or collaborations, please open an issue on [GitHub](https://anonymous.4open.science/r/TUCL_BrainSeg-1C2F/issues).
 
