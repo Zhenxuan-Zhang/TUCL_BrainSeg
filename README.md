@@ -1,7 +1,7 @@
 # Task-oriented Uncertainty Collaborative Learning (TUCL) for Label-Efficient Brain Tumor Segmentation
 this is the repo for tucl_brainseg
 
-![TUCL](tucl_banner.png)
+![TUCL](seg_net.png)
 
 > 🚀 A deep learning framework for multi-contrast brain tumor segmentation with uncertainty modeling.
 
