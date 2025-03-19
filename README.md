@@ -8,13 +8,14 @@ this is the repo for tucl_brainseg
 ---
 
 ## 📖 Table of Contents
-- [Abstract](#abstract)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Results](#results)
-- [Citation](#citation)
+- [Task-oriented Uncertainty Collaborative Learning (TUCL) for Label-Efficient Brain Tumor Segmentation](#task-oriented-uncertainty-collaborative-learning-tucl-for-label-efficient-brain-tumor-segmentation)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [🧠 Abstract](#-abstract)
+  - [⚙️ Installation](#️-installation)
+  - [🚀 Usage](#-usage)
+  - [📂 Dataset](#-dataset)
+  - [🏗 Model Architecture](#-model-architecture)
+  - [📊 Results](#-results)
 
 ---
 

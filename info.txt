@@ -1,0 +1,54 @@
+# Project structure
+/tucl_brainseg/
+│── models/
+│   ├── __init__.py
+│   ├── model.py
+│── utils/
+│   ├── __init__.py
+│   ├── dataset_utils.py
+│   ├── data_preprocessing.py
+│   ├── train_utils.py       
+│   ├── train_utils_tucl.py   
+│   ├── loss_utils.py
+│   ├── metric_utils.py
+│   ├── hausdorff_utils.py
+│   ├── binary_utils.py
+│   ├── scheduler_utils.py
+│── scripts/
+│   ├── train.py
+│── requirements.txt
+│── model_selector.py
+│── README.md
+
+
+# training
+
+## Train a TUCL model (without train_loop_sp)
+python scripts/train.py --model tucl \
+    --data_dir /path/to/dataset \
+    --epochs 60 \
+    --batch_size 4 \
+    --lr 0.003 \
+    --min_lr 0.0005 \
+    --warmup_epochs 8 \
+    --save_path /path/to/save/model \
+    --gpu 0
+
+## Train a TUCL model using train_loop_sp (for specialized training)
+python scripts/train.py --model tucl \
+    --data_dir /path/to/dataset \
+    --epochs 60 \
+    --batch_size 4 \
+    --lr 0.003 \
+    --min_lr 0.0005 \
+    --warmup_epochs 8 \
+    --save_path /path/to/save/model \
+    --gpu 0 \
+    --use_train_loop_sp / use_train_loop_sp_uc
+
+
+# run a Model for Inference
+
+## TUCL
+python tucl.py --checkpoint /path/to/tucl_checkpoint.pth
+
