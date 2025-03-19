@@ -231,8 +231,8 @@ class TextEmbeddingLayer(nn.Module):
     def forward(self, x):
         return self.linear(x)
 
-# TransformerBTS model including text prompt fusion (using cross-attention)
-class TransformerBTS(nn.Module):
+# TransformerTUCL model including text prompt fusion (using cross-attention)
+class TransformerTUCL(nn.Module):
     def __init__(self,
                  img_dim,
                  patch_dim,
@@ -246,7 +246,7 @@ class TransformerBTS(nn.Module):
                  conv_patch_representation=True,
                  positional_encoding_type="learned",
                  text_prompt_dim=0):
-        super(TransformerBTS, self).__init__()
+        super(TransformerTUCL, self).__init__()
         assert embedding_dim % num_heads == 0
         assert img_dim % patch_dim == 0
 
@@ -348,12 +348,12 @@ class TransformerBTS(nn.Module):
         x = x.permute(0, 4, 1, 2, 3).contiguous()
         return x
 
-class BTS(TransformerBTS):
+class TUCL(TransformerTUCL):
     def __init__(self, img_dim, patch_dim, num_channels, num_classes,
                  embedding_dim, num_heads, num_layers, hidden_dim,
                  dropout_rate=0.0, attn_dropout_rate=0.0, conv_patch_representation=True,
                  positional_encoding_type="learned", text_prompt_dim=0):
-        super(BTS, self).__init__(img_dim=img_dim,
+        super(TUCL, self).__init__(img_dim=img_dim,
                                   patch_dim=patch_dim,
                                   num_channels=num_channels,
                                   embedding_dim=embedding_dim,
@@ -470,14 +470,14 @@ class DeBlock(nn.Module):
         x1 = x1 + x
         return x1
 
-def TUCL(dataset='brats', _conv_repr=True, _pe_type="learned", text_prompt_dim=0):
+def format_TUCL(dataset='brats', _conv_repr=True, _pe_type="learned", text_prompt_dim=0):
     if dataset.lower() == 'brats':
         img_dim = 128
         num_classes = 3
     num_channels = 4
     patch_dim = 8
     aux_layers = [1, 2, 3, 4]
-    model = BTS(
+    model = TUCL(
         img_dim,
         patch_dim,
         num_channels,
@@ -496,7 +496,7 @@ def TUCL(dataset='brats', _conv_repr=True, _pe_type="learned", text_prompt_dim=0
 
 
 def get_tucl():
-    _, model = TUCL(dataset='brats', _conv_repr=True, _pe_type="learned")
+    _, model = format_TUCL(dataset='brats', _conv_repr=True, _pe_type="learned")
     
     return model
 
